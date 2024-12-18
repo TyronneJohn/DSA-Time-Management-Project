@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Time Management System</title>
+</head>
+<body>
+    <div>
+        <h1 class="A">Time Management System</h1>
+        <input type="text" id="searchBar" placeholder="Search tasks by title or description...">
+        <button id="searchButton">Search</button>
+    </div>
+
+    <div id="sidebar">
+        <form id="taskForm">
+            <h2>Add task / Edit</h2>
+            <label for="title">Task Title:</label>
+            <input type="text" id="title" name="title" placeholder="Enter task title" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" placeholder="Enter task description"></textarea>
+
+            <label for="priority">Priority:</label>
+            <select id="priority" name="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <label for="time">Estimated Time (hh:mm):</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="day">Day:</label>
+            <input type="date" id="day" name="day" required>
+
+            <label for="startTime">Start Time:</label>
+            <input type="time" id="startTime" name="startTime" placeholder="Start time">
+
+            <button type="submit" class="addtasks">Save</button>
+        </form>
+    </div>
+    
+    <div id="taskList">
+        <div id="taskcard"></div>
+        <ul id="tasks"></ul>
+    </div>
+
+    <div id="dailySummary">
+        <h3>Daily Summary</h3>
+        <div id="summaryContent">
+            <p>No tasks added yet.</p>
+        </div>
+    </div>
+
+    <div id="weeklySummary">
+        <h3>Weekly Overview</h3>
+        <div id="weeklyContent">
+            <p>No tasks added yet.</p>
+        </div>
+    </div>    
+
+    <script src="script.js"> </script>
+</body>
+</html>
